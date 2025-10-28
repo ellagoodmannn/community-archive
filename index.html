@@ -4,6 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'DM Sans', sans-serif;
+            margin: 0;
+            padding: 20 px;
+            background: #BBB1A5;
+        }
+    
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 15px;
+        }
+        .grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      transition: transform 0.2s ease;
+    }
+    .grid img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Image Grid</h1>
+  <div class="grid">
+    <img src="images/Asset 1.png" alt="Asset 1">
+    <img src="images/Asset 2.png" alt="Asset 2">
+    <img src="images/Asset 3.png" alt="Asset 3">
+    <img src="images/Asset 4.png" alt="Asset 4">
+    <img src="images/Asset 5.png" alt="Asset 5">
+    <img src="images/Asset 6.png" alt="Asset 6">
+    <img src="images/Asset 7.png" alt="Asset 7">
+    <img src="images/Asset 8.png" alt="Asset 8">
+  </div>
+
+    </style>
 </head>
 <body>
     hello world!
