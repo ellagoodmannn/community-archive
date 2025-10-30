@@ -28,13 +28,18 @@
         }
 
         .top-right-img {
-            position: fixed;
+            position: relative;
+            transition:0.3s;
             top: 20px;
             right: 20px;
             width: 300px;
             border-radius: 10px;
             object-fit: cover;
         }
+        .top-right-img:hover {
+  filter: contrast(150%) saturate(150%) hue-rotate(10deg);
+  transform: scale(1.03);
+}
 
         #playBtn {
             background: #FF5C45;
