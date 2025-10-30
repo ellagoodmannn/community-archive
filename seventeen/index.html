@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "Delusse_Family";
+            src: url("../fonts/Delusse_Family/Delusse-Regular-Trial.otf") format("opentype");
+            font-weight: normal;
+        }
+
+        h1{
+            font-family: 'DM Sans', sans-serif;
+            margin: 0;
+            padding: 20px 15px;
+            font-size: 200px;
+            color: #FF5C45;
+            -webkit-text-stroke: 1px #222;
+        }
+
+        body {
+            font-family: "Delusse_Family", sans-serif;
+            color: #5E4C8C;
+            background: #BBB1A5;
+            padding: 20px;
+        }
+
+        .top-right-img {
+            position: fixed;
+            transition: transform 0.3s ease;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .top-right-img:hover {
+  transform: rotate(360deg) scale(1.05);
+}
+
+        #playBtn {
+            background: #FF5C45;
+            color: #CCE100;
+            font-family: 'DM Sans', sans-serif;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #playBtn:hover {
+            font-family: 'DM Sans', sans-serif;
+            background: #CCE100;
+            color: #FF5C45;
+        }
+    </style>
+</head>
+<body>
+
+<img src="../images/Asset 21.png" class="top-right-img" alt="">
+
+<h1>2002</h1>
+
+<button id="playBtn">Play</button>
+
+<audio id="storyAudio">
+    <source src="../audio/andrew.m4a" type="audio/mp4">
+    Your browser does not support the audio tag.
+</audio>
+
+<p>
+This photo was taken in Ireland in 2002, probably in the Dingle Peninsula, but that’s based on context from other photos at the time. I was 13 and traveling with my grandparents. This is an important moment for me because it felt like the first time I was feeling like an adult. Even though most of the people I was surrounded by were my grandparents’ age, this photo was taken of us, when most of the other photos from the trip were things from my perspective as a photographer, at least in terms of the artifacts I have documenting the trip.
+I have so many memories of this particular moment. It really stands out to me as a pivotal moment in my life. I also have strong memories of Ireland because the landscape was so vividly green, a color unlike anything I’ve seen anywhere else. The greenery sparked an interest in macro photography of plants and flowers, which has continued into other aspects of my life and creative practices.
+The emotions that come up related to this photo are mixed. In some ways, it’s sad because it is a photo of my grandmother who, due to dementia, is not really the person she used to be, and also of her partner, who was really important to me as a grandfather and someone I looked up to at very important moments in my life. In a lot of ways, it was also a happy memory because it was a really positive time spent with two people where it was truly just the three of us. Even though we were in a group with other family members, there weren’t other people I was competing with for their attention.
+It’s also a happy memory of a time where I felt competent and coming into my own, starting to explore who I was and what mattered to me. Even though I had not yet come out as gay, I knew who I was and felt strongly in that. It is a moment I think of fondly, and this photo captures at least an aspect of that trip.
+
+
+<script>
+    const playBtn = document.getElementById("playBtn");
+    const audio = document.getElementById("storyAudio");
+
+    playBtn.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            playBtn.textContent = "Pause";
+        } else {
+            audio.pause();
+            playBtn.textContent = "Play";
+        }
+    });
+</script>
+
+</body>
+</html>
