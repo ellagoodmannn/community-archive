@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Collection with Poem</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +38,7 @@
       color: #CCE100;
     }
 
-    /* Poem styles */
+    /* Poem styling */
     #poem {
       max-width: 700px;
       margin-bottom: 40px;
@@ -50,6 +50,17 @@
 
     #poem p {
       margin: 0 0 10px 0;
+    }
+
+    #poem span {
+      display: inline-block;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+
+    #poem span:hover {
+      transform: rotate(180deg) scale(1.2);
+      color: #CCE100;
     }
 
     /* Grid gallery */
@@ -76,25 +87,24 @@
     }
   </style>
 </head>
-
 <body>
   <div class="page">
     <h1>This is a growing collection.</h1>
 
-    <!-- Poem displayed instantly -->
+    <!-- Poem -->
     <div id="poem">
-      <p>After slow death</p>
-      <p>Love must clean house</p>
-      <p>Choose memories to keep</p>
-      <p>And memories to let go</p>
-      <p>Give each lamentation</p>
-      <p>An ear to hear</p>
-      <p>A heart to lay rest</p>
-      <p>Let no soul forget</p>
-      <p>An eternity of desire awaits</p>
+      <p><span>After</span> <span>slow</span> <span>death</span></p>
+      <p><span>Love</span> <span>must</span> <span>clean</span> <span>house</span></p>
+      <p><span>Choose</span> <span>memories</span> <span>to</span> <span>keep</span></p>
+      <p><span>And</span> <span>memories</span> <span>to</span> <span>let</span> <span>go</span></p>
+      <p><span>Give</span> <span>each</span> <span>lamentation</span></p>
+      <p><span>An</span> <span>ear</span> <span>to</span> <span>hear</span></p>
+      <p><span>A</span> <span>heart</span> <span>to</span> <span>lay</span> <span>rest</span></p>
+      <p><span>Let</span> <span>no</span> <span>soul</span> <span>forget</span></p>
+      <p><span>An</span> <span>eternity</span> <span>of</span> <span>desire</span> <span>awaits</span></p>
     </div>
 
-    <!-- Grid gallery -->
+    <!-- Gallery -->
     <div class="grid">
       <a href="one/"><img src="images/Asset 5.png" alt="Asset 5"></a>
       <a href="two/"><img src="images/Asset 6.png" alt="Asset 6"></a>
