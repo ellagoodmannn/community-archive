@@ -28,8 +28,8 @@
         }
 
         .top-right-img {
-            position: relative;
-            transition:0.3s;
+            position: fixed;
+            transition: transform 0.3s ease;
             top: 20px;
             right: 20px;
             width: 300px;
@@ -37,8 +37,7 @@
             object-fit: cover;
         }
         .top-right-img:hover {
-  filter: contrast(150%) saturate(150%) hue-rotate(10deg);
-  transform: scale(1.03);
+  transform: rotate(3deg) scale(1.05);
 }
 
         #playBtn {
