@@ -38,7 +38,8 @@
 
         #playBtn {
             background: #FF5C45;
-            color: white;
+            color: #CCE100;
+            font-family: 'DM Sans', sans-serif;
             border: none;
             padding: 10px 18px;
             border-radius: 8px;
@@ -48,7 +49,9 @@
         }
 
         #playBtn:hover {
-            background: #e44d38;
+            font-family: 'DM Sans', sans-serif;
+            background: #CCE100;
+            color: #FF5C45;
         }
     </style>
 </head>
@@ -58,7 +61,7 @@
 
 <h1>Brisk</h1>
 
-<button id="playBtn">Play Audio</button>
+<button id="playBtn">Play</button>
 
 <audio id="storyAudio">
     <source src="../audio/eli.m4a" type="audio/mp4">
@@ -76,10 +79,10 @@ I don't know what you were looking for, so I'm gonna give you a lot. That's John
     playBtn.addEventListener("click", () => {
         if (audio.paused) {
             audio.play();
-            playBtn.textContent = "Pause Audio";
+            playBtn.textContent = "Pause";
         } else {
             audio.pause();
-            playBtn.textContent = "Play Audio";
+            playBtn.textContent = "Play";
         }
     });
 </script>
