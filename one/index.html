@@ -6,23 +6,92 @@
     <title>Document</title>
     <style>
         @font-face {
-      font-family: "Delusse_Family";
-      src: url("../fonts/Delusse_Family/Delusse-Regular-Trial.otf") format("opentype");
-      font-weight: normal;
-    }
-    h1{
-        font-family: "Delusse_Family", sans-serif;
-        color: #FF5C45;
-    }
+            font-family: "Delusse_Family";
+            src: url("../fonts/Delusse_Family/Delusse-Regular-Trial.otf") format("opentype");
+            font-weight: normal;
+        }
 
-    body {
-      font-family: "Delusse_Family", sans-serif;
-      color: #5E4C8C;
-    }
+        h1{
+            font-family: 'DM Sans', sans-serif;
+            margin: 0;
+            padding: 20px 15px;
+            font-size: 200px;
+            color: #FF5C45;
+            -webkit-text-stroke: 1px #222;
+        }
+
+        body {
+            font-family: "Delusse_Family", sans-serif;
+            color: #5E4C8C;
+            background: #BBB1A5;
+            padding: 20px;
+        }
+
+        .top-right-img {
+            position: fixed;
+            transition: transform 0.3s ease;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .top-right-img:hover {
+  transform: rotate(360deg) scale(1.05);
+}
+
+        #playBtn {
+            background: #FF5C45;
+            color: #CCE100;
+            font-family: 'DM Sans', sans-serif;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #playBtn:hover {
+            font-family: 'DM Sans', sans-serif;
+            background: #CCE100;
+            color: #FF5C45;
+        }
     </style>
 </head>
-<h1>Brisk</h1>
 <body>
-    "first image"
+
+<img src="../images/Asset 5.png" class="top-right-img" alt="">
+
+<h1>Seattle Summer Night</h1>
+
+<button id="playBtn">Play</button>
+
+<audio id="storyAudio">
+    <source src="../audio/emmie.m4a" type="audio/mp4">
+    Your browser does not support the audio tag.
+</audio>
+
+<p>
+This picture is from a Seattle summer night, near the end of the season during one of the final heat waves. It was really hot, so my friends and I went swimming at a dock on Lake Washington. We ran into a friend who has a boat, and he offered to take us out. It all lined up perfectly—it was a spontaneous, fun night. Everyone was in the moment; no one was on their phones, though I did snap a picture. We were just enjoying each other’s company.
+
+Looking back, I thought it was a precious memory at the time, but now it evokes nostalgia and warm feelings. We’re all living separate lives across the country post-college, and it makes me appreciate how, in college, you’re surrounded by your friends within a small radius—a closeness that rarely happens in adult life. This picture evokes strong feelings of friendship, nostalgia, and gratitude, as I’m still friends with these people.
+
+
+<script>
+    const playBtn = document.getElementById("playBtn");
+    const audio = document.getElementById("storyAudio");
+
+    playBtn.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            playBtn.textContent = "Pause";
+        } else {
+            audio.pause();
+            playBtn.textContent = "Play";
+        }
+    });
+</script>
+
 </body>
 </html>
