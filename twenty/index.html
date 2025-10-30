@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "Delusse_Family";
+            src: url("../fonts/Delusse_Family/Delusse-Regular-Trial.otf") format("opentype");
+            font-weight: normal;
+        }
+
+        h1{
+            font-family: 'DM Sans', sans-serif;
+            margin: 0;
+            padding: 20px 15px;
+            font-size: 200px;
+            color: #FF5C45;
+            -webkit-text-stroke: 1px #222;
+        }
+
+        body {
+            font-family: "Delusse_Family", sans-serif;
+            color: #5E4C8C;
+            background: #BBB1A5;
+            padding: 20px;
+        }
+
+        .top-right-img {
+            position: fixed;
+            transition: transform 0.3s ease;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .top-right-img:hover {
+  transform: rotate(360deg) scale(1.05);
+}
+
+        #playBtn {
+            background: #FF5C45;
+            color: #CCE100;
+            font-family: 'DM Sans', sans-serif;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #playBtn:hover {
+            font-family: 'DM Sans', sans-serif;
+            background: #CCE100;
+            color: #FF5C45;
+        }
+    </style>
+</head>
+<body>
+
+<img src="../images/Asset 24.png" class="top-right-img" alt="">
+
+<h1>Steamed</h1>
+
+<button id="playBtn">Play</button>
+
+<audio id="storyAudio">
+    <source src="../audio/sofie.m4a" type="audio/mp4">
+    Your browser does not support the audio tag.
+</audio>
+
+<p>
+This was one of my best friend’s birthdays. We woke up on the morning of her birthday absolutely exhausted because we had celebrated the night before. It was September at this point, so it was already pretty cold here, but we decided at the last minute to go to the beach.
+It was a plan we had talked about before — kind of unrealistic — but we ended up saying, let’s just do it anyway. It was freezing, so, so cold. Everyone else stayed on the sand, but she and I said, we have to go in the water. We couldn’t go to the beach and not go in.
+We dove in and dunked our heads, and it was the most refreshing and amazing feeling ever. Even though it was freezing, it was exactly what I wanted. I knew it was the last time I’d be in the water until next summer, so it felt like a goodbye to the ocean.
+It was perfect and we were so happy. Our decision to just do it felt so refreshing. I didn’t realize how badly I wanted that dunk until we did it, and it ended up being the best thing ever. After, we warmed up on the beach in lots of blankets, and it was a really sweet day.
+We also took the ferry back, and it was sunset. It was windy, but we were all bundled up, and the sun was setting over the Manhattan skyline. It was a perfect day — the perfect ending to all of it.
+
+
+<script>
+    const playBtn = document.getElementById("playBtn");
+    const audio = document.getElementById("storyAudio");
+
+    playBtn.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            playBtn.textContent = "Pause";
+        } else {
+            audio.pause();
+            playBtn.textContent = "Play";
+        }
+    });
+</script>
+
+</body>
+</html>
