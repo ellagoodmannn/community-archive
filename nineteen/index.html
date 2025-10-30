@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "Delusse_Family";
+            src: url("../fonts/Delusse_Family/Delusse-Regular-Trial.otf") format("opentype");
+            font-weight: normal;
+        }
+
+        h1{
+            font-family: 'DM Sans', sans-serif;
+            margin: 0;
+            padding: 20px 15px;
+            font-size: 200px;
+            color: #FF5C45;
+            -webkit-text-stroke: 1px #222;
+        }
+
+        body {
+            font-family: "Delusse_Family", sans-serif;
+            color: #5E4C8C;
+            background: #BBB1A5;
+            padding: 20px;
+        }
+
+        .top-right-img {
+            position: fixed;
+            transition: transform 0.3s ease;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .top-right-img:hover {
+  transform: rotate(360deg) scale(1.05);
+}
+
+        #playBtn {
+            background: #FF5C45;
+            color: #CCE100;
+            font-family: 'DM Sans', sans-serif;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #playBtn:hover {
+            font-family: 'DM Sans', sans-serif;
+            background: #CCE100;
+            color: #FF5C45;
+        }
+    </style>
+</head>
+<body>
+
+<img src="../images/Asset 23.png" class="top-right-img" alt="">
+
+<h1>High School, man...</h1>
+
+<button id="playBtn">Play</button>
+
+<audio id="storyAudio">
+    <source src="../audio/sarah pt 1.m4a" type="audio/mp4">
+    Your browser does not support the audio tag.
+</audio>
+
+<p>
+I guess this moment was memorable, but more so, this period of my life was very memorable because it was Covid. It was our senior year of high school, and I was going through, similar to most people, a lot of transitions — mostly coming-of-age stuff. I genuinely felt I just had really bad relationships or didn’t like many of the boys in my high school. On top of Covid, I felt no one liked me and I didn’t really like them. It felt isolating. I started wondering, what if I like girls? This was when I was questioning my sexuality.
+The time was memorable because I felt very alone and stuck in my head. This photo is me taking a selfie after I told one of my closest friends for the first time that I thought I was bisexual. I told my friends one-on-one, and I tried to be very sensitive about it — also because we couldn’t hang out in groups, so that added another dynamic. I remember choosing Emma first because she’s very understanding, and her grandpa was gay. It’s strange, but I was factoring in who would be least offended by my potential sexuality. I tried to narrow it down to a logical process because my feelings didn’t feel logical.
+My thoughts were very consuming at the time. I was journaling constantly, trying to let out all these emotions and thoughts that kept piling up. The feeling I have when I think of this time is being in my dark bedroom, alone with my thoughts, wanting to escape, and feeling that each day I didn’t tell someone — didn’t come out to someone — I was lying to them.
+In hindsight, I think my questioning was more a reflection of Covid and coming-of-age, feeling not really liked by my male peers in a romantic way, feeling neglected romantically, and feeling that standards were very high. When I look at this photo and think of that time, I think of how self-conscious I was, and how it felt like an enormous weight lifted off me every time I told someone — or eventually when I came out to many people.
+It was a time when my thoughts felt more real, present, and powerful than my physical body did. I’ve come close to feeling that way since, but that period was full of spiraling thoughts. So much energy was devoted to: Do I like girls? How do I tell people? How should I go about it? I was very calculated.
+I felt my thoughts could spill over into another body. There were so many of them I couldn’t hold them in. To relieve that pressure — like something overflowing — I had to tell people. I genuinely felt I would explode if I didn’t, because it weighed on me so heavily.
+It’s funny: I took this photo on Snapchat to make it seem casual — one down, seven to go, as if it wasn’t a big deal. But inside, it was the heaviest thing. Looking back, it was probably one of the most stressful points of my life, but I took this mirror selfie with a caption, one down, something to go, as if I was checking something off a shopping list. In reality, it was torturing me for months. It shows how I tried to play it off, but it was crippling to carry the weight of feeling I wasn’t being honest with others, or with myself.
+
+
+<script>
+    const playBtn = document.getElementById("playBtn");
+    const audio = document.getElementById("storyAudio");
+
+    playBtn.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            playBtn.textContent = "Pause";
+        } else {
+            audio.pause();
+            playBtn.textContent = "Play";
+        }
+    });
+</script>
+
+</body>
+</html>
