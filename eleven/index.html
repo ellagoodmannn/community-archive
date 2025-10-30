@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "Delusse_Family";
+            src: url("../fonts/Delusse_Family/Delusse-Regular-Trial.otf") format("opentype");
+            font-weight: normal;
+        }
+
+        h1{
+            font-family: 'DM Sans', sans-serif;
+            margin: 0;
+            padding: 20px 15px;
+            font-size: 200px;
+            color: #FF5C45;
+            -webkit-text-stroke: 1px #222;
+        }
+
+        body {
+            font-family: "Delusse_Family", sans-serif;
+            color: #5E4C8C;
+            background: #BBB1A5;
+            padding: 20px;
+        }
+
+        .top-right-img {
+            position: fixed;
+            transition: transform 0.3s ease;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .top-right-img:hover {
+  transform: rotate(360deg) scale(1.05);
+}
+
+        #playBtn {
+            background: #FF5C45;
+            color: #CCE100;
+            font-family: 'DM Sans', sans-serif;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #playBtn:hover {
+            font-family: 'DM Sans', sans-serif;
+            background: #CCE100;
+            color: #FF5C45;
+        }
+    </style>
+</head>
+<body>
+
+<img src="../images/Asset 15.png" class="top-right-img" alt="">
+
+<h1>Published</h1>
+
+<button id="playBtn">Play</button>
+
+<audio id="storyAudio">
+    <source src="../audio/bella.m4a" type="audio/mp4">
+    Your browser does not support the audio tag.
+</audio>
+
+<p>
+This picture is from me at graduation, graduating college. It was obviously a big pivotal moment in my life. At this moment, I was feeling very excited, but I was also exhausted because, I don't know if you can include this, but I had been drinking all morning. You know, we were celebrating and then I went and sat outside in the hot sun and there was a lot of people at this graduation. So I was very, very exhausted and just a little bit overwhelmed because graduating college is a crazy, like monumental time in your life.
+And I felt like there were so many emotions I should be feeling, but I honestly kind of like dissociating and didn't really, wasn't able to fully process what was going on, that this period of my life was over. But all in all, it was a really fun time with friends, celebrating our accomplishments and getting to hang out with everybody one last time before we all moved out. And right before this picture was taken, I got to walk across the stage and get my diploma, which is very surreal that I got my college degree and it was a big time in my life.
+
+<script>
+    const playBtn = document.getElementById("playBtn");
+    const audio = document.getElementById("storyAudio");
+
+    playBtn.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            playBtn.textContent = "Pause";
+        } else {
+            audio.pause();
+            playBtn.textContent = "Play";
+        }
+    });
+</script>
+
+</body>
+</html>
