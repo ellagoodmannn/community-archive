@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "Delusse_Family";
+            src: url("../fonts/Delusse_Family/Delusse-Regular-Trial.otf") format("opentype");
+            font-weight: normal;
+        }
+
+        h1{
+            font-family: 'DM Sans', sans-serif;
+            margin: 0;
+            padding: 20px 15px;
+            font-size: 200px;
+            color: #FF5C45;
+            -webkit-text-stroke: 1px #222;
+        }
+
+        body {
+            font-family: "Delusse_Family", sans-serif;
+            color: #5E4C8C;
+            background: #BBB1A5;
+            padding: 20px;
+        }
+
+        .top-right-img {
+            position: fixed;
+            transition: transform 0.3s ease;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .top-right-img:hover {
+  transform: rotate(360deg) scale(1.05);
+}
+
+        #playBtn {
+            background: #FF5C45;
+            color: #CCE100;
+            font-family: 'DM Sans', sans-serif;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #playBtn:hover {
+            font-family: 'DM Sans', sans-serif;
+            background: #CCE100;
+            color: #FF5C45;
+        }
+    </style>
+</head>
+<body>
+
+<img src="../images/Asset 13.png" class="top-right-img" alt="">
+
+<h1>Published</h1>
+
+<button id="playBtn">Play</button>
+
+<audio id="storyAudio">
+    <source src="../audio/paige.m4a" type="audio/mp4">
+    Your browser does not support the audio tag.
+</audio>
+
+<p>
+ Hi Ella. This is a photo of the first time I was published in print in a newspaper. I had written for my school newspapers before, but this was the first time that I'd gotten an article published in a city newspaper. I was so excited because I had driven up there twice actually, to Edmonds, which is a 30 minute driveway from where I was to try and find the print edition, and I couldn't find it the first time.
+
+Then I drove up a second time with my boyfriend. I finally found it and I was so excited because I was flipping through the newspaper trying to find my article because I didn't know what page it was on. And it turns out it was on the front page! Just that little small section, the city climate meeting article.
+
+I just had the biggest smile because the first time I was published, it was on the front page. And then this started my journey of getting published more often. This is just a milestone moment because it was my dream to have my writing in print in a newspaper that was distributed throughout the city.
+
+It was a very happy moment. Bye Ella. Love you.
+
+<script>
+    const playBtn = document.getElementById("playBtn");
+    const audio = document.getElementById("storyAudio");
+
+    playBtn.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            playBtn.textContent = "Pause";
+        } else {
+            audio.pause();
+            playBtn.textContent = "Play";
+        }
+    });
+</script>
+
+</body>
+</html>
