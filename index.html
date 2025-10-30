@@ -89,4 +89,46 @@
       <a href="twenty-one/"><img src="images/Asset 25.png" alt="Asset 25"></a>
     </div>
   </div>
+  <style>
+  #poem {
+    max-width: 700px;
+    margin-bottom: 40px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: #222;
+  }
+
+  .line {
+    display: block;
+    opacity: 0;
+    white-space: pre-wrap;
+    overflow: hidden;
+  }
+
+  .line.visible {
+    opacity: 1;
+    animation: typewriter 2s steps(40, end) forwards;
+  }
+
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+</style>
+
+<script>
+  const lines = document.querySelectorAll('#poem .line');
+  let currentLine = 0;
+
+  function showLine() {
+    if (currentLine < lines.length) {
+      lines[currentLine].classList.add('visible');
+      currentLine++;
+      setTimeout(showLine, 2000); // delay between lines
+    }
+  }
+
+  showLine();
+</script>
 </body>
