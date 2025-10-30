@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "Delusse_Family";
+            src: url("../fonts/Delusse_Family/Delusse-Regular-Trial.otf") format("opentype");
+            font-weight: normal;
+        }
+
+        h1{
+            font-family: 'DM Sans', sans-serif;
+            margin: 0;
+            padding: 20px 15px;
+            font-size: 200px;
+            color: #FF5C45;
+            -webkit-text-stroke: 1px #222;
+        }
+
+        body {
+            font-family: "Delusse_Family", sans-serif;
+            color: #5E4C8C;
+            background: #BBB1A5;
+            padding: 20px;
+        }
+
+        .top-right-img {
+            position: fixed;
+            transition: transform 0.3s ease;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .top-right-img:hover {
+  transform: rotate(360deg) scale(1.05);
+}
+
+        #playBtn {
+            background: #FF5C45;
+            color: #CCE100;
+            font-family: 'DM Sans', sans-serif;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #playBtn:hover {
+            font-family: 'DM Sans', sans-serif;
+            background: #CCE100;
+            color: #FF5C45;
+        }
+    </style>
+</head>
+<body>
+
+<img src="../images/Asset 18.png" class="top-right-img" alt="">
+
+<h1>Peanut</h1>
+
+<button id="playBtn">Play</button>
+
+<audio id="storyAudio">
+    <source src="../audio/nina.m4a" type="audio/mp4">
+    Your browser does not support the audio tag.
+</audio>
+
+<p>
+Okay, hello. The image that I chose was a Polaroid. It's of my cat, peanut, and this was this past Christmas, which is one of the last times that I saw him. So in this image, he's just sitting under the tree with some of the toys that we got him, and he's looking really cute and adorable. And every time I look at this, I normally keep it in my wallet, in a little photo card holder that I decorated, it just brings me a lot of joy and contentment seeing him, because that as one of the last really happy moments that I had with him before he passed away back in the Spring. So it's just a really good reminder of keeping sort of like a family with me wherever I go, and knowing that he's okay, and how cute he looks. While it was really sad, looking back on it, I don't really know how I feel, but it brings me a little bit of peace seeing him and thinking of him in that way. Yeah, that was a very happy memory in the moment and looking back. It's an interesting feeling.
+
+<script>
+    const playBtn = document.getElementById("playBtn");
+    const audio = document.getElementById("storyAudio");
+
+    playBtn.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            playBtn.textContent = "Pause";
+        } else {
+            audio.pause();
+            playBtn.textContent = "Play";
+        }
+    });
+</script>
+
+</body>
+</html>
