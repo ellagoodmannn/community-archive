@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Sans:wght@100..1000&display=swap" rel="stylesheet">
 
   <style>
+    /* Reset list and link styles */
     ul, li {
       list-style: none;
     }
@@ -37,9 +38,24 @@
       color: #CCE100;
     }
 
+    /* Poem styles */
+    #poem {
+      max-width: 700px;
+      margin-bottom: 40px;
+      font-family: 'Caveat', cursive;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      color: #222;
+    }
+
+    #poem p {
+      margin: 0 0 10px 0;
+    }
+
+    /* Grid gallery */
     .grid {
       display: grid;
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 60px;
     }
 
@@ -65,18 +81,20 @@
   <div class="page">
     <h1>This is a growing collection.</h1>
 
-      <div id="poem">
-    <span class="line">After slow death</span>
-    <span class="line">Love must clean house</span>
-    <span class="line">Choose memories to keep</span>
-    <span class="line">And memories to let go</span>
-    <span class="line">Give each lamentation</span>
-    <span class="line">An ear to hear</span>
-    <span class="line">A heart to lay rest</span>
-    <span class="line">Let no soul forget</span>
-    <span class="line">An eternity of desire awaits</span>
-  </div>
+    <!-- Poem displayed instantly -->
+    <div id="poem">
+      <p>After slow death</p>
+      <p>Love must clean house</p>
+      <p>Choose memories to keep</p>
+      <p>And memories to let go</p>
+      <p>Give each lamentation</p>
+      <p>An ear to hear</p>
+      <p>A heart to lay rest</p>
+      <p>Let no soul forget</p>
+      <p>An eternity of desire awaits</p>
+    </div>
 
+    <!-- Grid gallery -->
     <div class="grid">
       <a href="one/"><img src="images/Asset 5.png" alt="Asset 5"></a>
       <a href="two/"><img src="images/Asset 6.png" alt="Asset 6"></a>
@@ -101,46 +119,5 @@
       <a href="twenty-one/"><img src="images/Asset 25.png" alt="Asset 25"></a>
     </div>
   </div>
-  <style>
-  #poem {
-    max-width: 700px;
-    margin-bottom: 40px;
-    font-family: 'Caveat', cursive;
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-    color: #222;
-  }
-
-  .line {
-    display: block;
-    opacity: 0;
-    white-space: pre-wrap;
-    overflow: hidden;
-  }
-
-  .line.visible {
-    opacity: 1;
-    animation: typewriter 2s steps(40, end) forwards;
-  }
-
-  @keyframes typewriter {
-    from { width: 0; }
-    to { width: 100%; }
-  }
-</style>
-
-<script>
-  const lines = document.querySelectorAll('#poem .line');
-  let currentLine = 0;
-
-  function showLine() {
-    if (currentLine < lines.length) {
-      lines[currentLine].classList.add('visible');
-      currentLine++;
-      setTimeout(showLine, 2000); // delay between lines
-    }
-  }
-
-  showLine();
-</script>
 </body>
+</html>
